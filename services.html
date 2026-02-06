@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Soko Cleaning Maids Ltd</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu+Condensed&display=swap"
+    rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/350446e42d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <a href="/" class="navbar__logo">Soko Cleaning Maids Ltd</a>
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <div class="navbar__menu">
+      <a href="index.html" class="navbar__link">Home</a>
+      <a href="services.html" class="navbar__link">Services</a>
+      <a href="contact.html" class="navbar__link">Contact Us</a>
+     <a href="about Us.html" class="navbar__link">About Us</a>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero__content">
+      <h1>SOKO CLEANING MAIDS Ltd</h1>
+      <a href="/" class="button">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- sercices sect -->
+  <div class="services">
+    <div class="services__container">
+      <div>
+        <p class="topline">features</p>
+        <h1 class="services__heading">What we offer</h1>
+      </div>
+      <div>
+        <img src="./images/Logos/scm.jpg" alt="mop" class="logo" />
+      </div>
+    </div>
+  </div>
+  <!-- Membership / Services Section -->
+  <div class="membership">
+    <h1>Our Services Include</h1>
+    <p class="membership__desc">Contact us and let Soko take care of the cleaning you don't want to do.</p>
+    <p>Call or WhatsApp us: <a href="tel:+447359406440">+44 7359 406440</a></p>
+
+      <!-- Booking / Quote Form -->
+      <div class="quote">
+        <h2>Request a Quote</h2>
+        <form class="quote-form" action="contact.html" method="get">
+          <div class="quote-grid">
+            <input type="text" name="name" placeholder="Full name" required>
+            <input type="email" name="email" placeholder="Email address" required>
+            <input type="tel" name="phone" placeholder="Phone number" required>
+            <input type="text" name="address" placeholder="Address or postcode" required>
+            <select name="service" required>
+              <option value="">Select a service</option>
+              <option value="after-event">After Event Cleaning</option>
+              <option value="starter">Starter</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+            </select>
+            <input type="date" name="preferred_date" aria-label="Preferred date">
+          </div>
+          <textarea name="message" placeholder="Additional details (optional)" rows="3"></textarea>
+          <div class="form-actions"><button class="button" type="submit">Request Quote</button></div>
+        </form>
+      </div>
+
+    <div class="membership__wrapper">
+      <!-- Starter -->
+      <div class="membership__card">
+        <div class="membership__title">
+          <i class="fa-solid fa-spray-can card-icon"></i>
+          <h3>Starter</h3>
+        </div>
+        <div class="membership__perks">
+          <p>Occasional cleaning support</p>
+          <p>Flexible scheduling</p>
+        </div>
+        <a href="contact.html?service=starter" class="button">Contact Us</a>
+      </div>
+
+      <!-- Weekly -->
+      <div class="membership__card">
+        <div class="membership__title">
+          <i class="fa-solid fa-calendar-week card-icon"></i>
+          <h3>Weekly</h3>
+        </div>
+        <div class="membership__perks">
+          <p>Regular maintenance contract</p>
+          <p>Dedicated cleaning staff</p>
+        </div>
+        <a href="contact.html?service=weekly" class="button">Contact Us</a>
+      </div>
+
+      <!-- Monthly -->
+      <div class="membership__card">
+        <div class="membership__title">
+          <i class="fa-solid fa-calendar-check card-icon"></i>
+          <h3>Monthly</h3>
+        </div>
+        <div class="membership__perks">
+          <p>Deep clean oversight</p>
+          <p>Preferred rates for members</p>
+        </div>
+        <a href="contact.html?service=monthly" class="button">Contact Us</a>
+      </div>
+
+      <!-- After Event Cleaning -->
+      <div class="membership__card">
+        <div class="membership__title">
+          <i class="fa-solid fa-party-balloons card-icon"></i>
+          <h3>After-Event Cleaning</h3>
+        </div>
+        <div class="membership__perks">
+          <img src="./images/squares/party.avif" alt="After-event cleanup">
+          <p>House parties, kids' birthday parties, and small events</p>
+          <p>Quick debris removal, stain treatment, upholstery refresh, bin emptying</p>
+          <p>Flexible same-day or next-day response where possible</p>
+        </div>
+        <a href="contact.html?service=after-event" class="button">Book After-Event Clean</a>
+        <p style="margin-top:0.5rem; font-size:0.95rem;">Or call <a href="tel:+447359406440">+44 7359 406440</a> for urgent bookings</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__desc">
+        <h1>Soko Cleaning Maids Ltd</h1>
+        <p>"YOU DON'T PAY FOR THE SERVICES, YOU PAY FOR THE RESULTS"</p>
+        <p id="phone"><i class="fa-solid fa-phone"></i> +44 7359 406440</p>
+        <p id="email"><a href="mailto:sokocleaningmaids@gmail.com"><i class="fa-solid fa-envelope"></i> sokocleaningmaids@gmail.com</a></p>
+      </div>
+      <div class="footer__links">
+        <h2 class="footer__title">Quick Links</h2>
+        <a href="contact.html" class="footer__link">Contact Us</a>
+        <a href="about.html" class="footer__link">About Us</a>
+        <a href="services.html" class="footer__link">Services</a>
+      </div>
+      <div class="footer__links">
+        <h2 class="footer__title">Membership</h2>
+        <a class="footer__link" href="#">Pricing</a>
+        <a class="footer__link" href="#">Plans</a>
+        <a class="footer__link" href="#">FAQ</a>
+      </div>
+      <div class="footer__links">
+        <h2 class="footer__title">Follow Us</h2>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/SokoCleaningMaids" class="social-icon facebook" target="_blank" rel="noopener" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/447359406440" class="social-icon whatsapp" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/SokoCleaningMaids" class="social-icon instagram" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@SokoCleaningMaids" class="social-icon tiktok" target="_blank" rel="noopener" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-wrapper">
+      &copy; 2026 Soko Cleaning Maids Ltd &#124; Dev by N-cubeDev.
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudfare.com/ajax/libs/gasp/3.5/ScrollTrigger.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
