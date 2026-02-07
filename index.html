@@ -6,19 +6,223 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Professional cleaning services in Scotland by Soko Cleaning Maids Ltd. Results-driven cleaning for homes and events.">
   <title>Soko Cleaning Maids Ltd</title>
-  
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  
+
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/350446e42d.js" crossorigin="anonymous"></script>
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Dashboard & Glow Styles -->
+  <style>
+    /* ================= DASHBOARD STYLES ================= */
+    .cleaning-dashboard {
+      padding: 80px 20px;
+      background: radial-gradient(circle at top, #050505, #000 70%);
+      text-align: center;
+    }
+
+    .dashboard-title {
+      font-family: 'Roboto Slab', serif;
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .dashboard-subtitle {
+      font-size: 14px;
+      color: #cfd8dc;
+      margin-bottom: 50px;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .dashboard-card {
+      border-radius: 18px;
+      padding: 40px 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid transparent;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1), inset 0 0 12px rgba(255, 255, 255, 0.05);
+    }
+
+    .dashboard-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 18px;
+      box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.08);
+      pointer-events: none;
+    }
+
+    .dashboard-card i {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .dashboard-card h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .dashboard-card span {
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    .dashboard-card:hover {
+      transform: translateY(-8px) scale(1.04);
+    }
+
+    .dashboard-card.home {
+      background: rgba(0, 60, 120, 0.85);
+      border-color: #00bcd4;
+      box-shadow: 0 0 25px #00bcd4, 0 0 45px rgba(0, 188, 212, 0.7), inset 0 0 18px rgba(255, 255, 255, 0.08);
+    }
+
+    .dashboard-card.office {
+      background: rgba(0, 80, 40, 0.85);
+      border-color: #00e676;
+      box-shadow: 0 0 25px #00e676, 0 0 45px rgba(0, 230, 118, 0.7), inset 0 0 18px rgba(255, 255, 255, 0.08);
+    }
+
+    .dashboard-card.deep {
+      background: rgba(120, 90, 0, 0.85);
+      border-color: #ffca28;
+      box-shadow: 0 0 25px #ffca28, 0 0 45px rgba(255, 202, 40, 0.7), inset 0 0 18px rgba(255, 255, 255, 0.08);
+    }
+
+    /* ================= BUTTON GLOW ================= */
+    .button {
+      box-shadow: 0 0 12px rgba(0, 188, 212, 0.6), inset 0 0 8px rgba(255, 255, 255, 0.15);
+      transition: 0.3s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 188, 212, 1), 0 0 45px rgba(0, 188, 212, 0.8);
+    }
+
+    /* ================= SECTION GLOW ================= */
+    .hero,
+    .cleaning-dashboard,
+    .services,
+    .membership,
+    .email {
+      box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+    }
+
+    /* ================= MOBILE RESPONSIVENESS ================= */
+    @media (max-width: 768px) {
+      /* Navbar */
+      .navbar {
+        padding: 14px 16px;
+      }
+
+      .navbar__logo {
+        font-size: 16px;
+      }
+
+      .navbar__menu {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      /* Hero */
+      .hero__content h1 {
+        font-size: 26px;
+      }
+
+      .hero__content p {
+        font-size: 14px;
+      }
+
+      /* Dashboard */
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .dashboard-card {
+        padding: 30px 18px;
+      }
+
+      .dashboard-card h3 {
+        font-size: 20px;
+      }
+
+      .dashboard-card i {
+        font-size: 32px;
+      }
+
+      /* Services */
+      .services__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .services__img-side img {
+        max-width: 220px;
+        margin: auto;
+      }
+
+      /* Membership */
+      .membership__wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      /* Email */
+      .email form {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .email input,
+      .email button {
+        width: 100%;
+      }
+
+      /* Footer */
+      .footer {
+        font-size: 12px;
+        padding: 12px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero__content h1 {
+        font-size: 22px;
+      }
+
+      .dashboard-card i {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+
+  <!-- NAVBAR -->
   <nav class="navbar">
     <a href="index.html" class="navbar__logo">Soko Cleaning Maids Ltd</a>
-    <div class="navbar__toggle" id="mobile-menu" aria-label="Toggle Menu">
+    <div class="navbar__toggle" id="mobile-menu">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
@@ -26,13 +230,13 @@
     </div>
     <div class="navbar__menu">
       <a href="index.html" class="navbar__link">Home</a>
-      <a href="about Us.html" class="navbar__link">About Us</a>
+      <a href="about.html" class="navbar__link">About Us</a>
       <a href="services.html" class="navbar__link">Services</a>
       <a href="contact.html" class="navbar__link">Contact Us</a>
-
     </div>
   </nav>
-<!-- Hero Sec -->
+
+  <!-- HERO -->
   <header class="hero">
     <div class="hero__content">
       <h1 class="animation-hero">SOKO CLEANING MAIDS LTD</h1>
@@ -43,6 +247,33 @@
     </div>
   </header>
 
+  <!-- FUTURISTIC DASHBOARD -->
+  <section class="cleaning-dashboard">
+    <h2 class="dashboard-title">Our Core Cleaning Services</h2>
+    <p class="dashboard-subtitle">Professional solutions for homes, offices & events</p>
+
+    <div class="dashboard-grid">
+      <div class="dashboard-card home" onclick="location.href='services.html#domestic'">
+        <i class="fa-solid fa-house"></i>
+        <h3>Home Cleaning</h3>
+        <span>Domestic • Move-in • Move-out</span>
+      </div>
+
+      <div class="dashboard-card office" onclick="location.href='services.html#commercial'">
+        <i class="fa-solid fa-building"></i>
+        <h3>Office Cleaning</h3>
+        <span>Commercial • Shops • Workspaces</span>
+      </div>
+
+      <div class="dashboard-card deep" onclick="location.href='services.html#deep'">
+        <i class="fa-solid fa-soap"></i>
+        <h3>Deep Cleaning</h3>
+        <span>Kitchens • Bathrooms • Carpets</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
   <section class="services">
     <div class="services__container">
       <div class="services__text-side">
@@ -58,125 +289,57 @@
         </div>
       </div>
       <div class="services__img-side">
-        <img src="./images/Logos/scm.jpg" alt="">
+        <img src="./images/Logos/scm.jpg" alt="Soko Cleaning Logo">
       </div>
     </div>
   </section>
-<!-- membership sec-->
+
+  <!-- MEMBERSHIP -->
   <section class="membership">
     <h1 class="animation-membership">View Our Plans</h1>
     <p class="membership__desc animation-membership">Enquire with us for tailored solutions</p>
     <div class="membership__wrapper">
       <div class="membership__card animation-card">
-        <div class="membership__title">
-          <i class="fa-solid fa-spray-can card-icon"></i>
-          <h3>Starter</h3>
-        </div>
-        <div class="membership__perks">
-          <p>Occasional cleaning support</p>
-          <p>Flexible scheduling</p>
-        </div>
+        <h3>Starter</h3>
+        <p>Occasional cleaning support</p>
         <a href="contact.html" class="button">Contact Us</a>
       </div>
 
       <div class="membership__card animation-card">
-        <div class="membership__title">
-          <i class="fa-solid fa-calendar-week card-icon"></i>
-          <h3>Weekly</h3>
-        </div>
-        <div class="membership__perks">
-          <p>Regular maintenance contract</p>
-          <p>Dedicated cleaning staff</p>
-        </div>
+        <h3>Weekly</h3>
+        <p>Regular maintenance contract</p>
         <a href="contact.html" class="button">Contact Us</a>
       </div>
 
       <div class="membership__card animation-card">
-        <div class="membership__title">
-          <i class="fa-solid fa-calendar-check card-icon"></i>
-          <h3>Monthly</h3>
-        </div>
-        <div class="membership__perks">
-          <p>Deep clean oversight</p>
-          <p>Preferred rates for members</p>
-        </div>
+        <h3>Monthly</h3>
+        <p>Deep clean oversight</p>
         <a href="contact.html" class="button">Contact Us</a>
       </div>
     </div>
   </section>
 
-  <!-- <section class="team">
-    <div class="team__wrapper">
-      <div class="team__text animation-team">
-        <p class="topline">Get To Know Us</p>
-        <h2>Meet Our Cleaners <br><small>Soko Cleaning Maids Ltd</small></h2>
-        <p class="team__desc">All your cleaning done professionally!</p>
-      </div>
-
-      <div class="team__text animation-team">
-        <p class="topline">Free Quote</p>
-        <h2>The Soko Standard</h2>
-        <p class="team__desc">Experience our quality before committing. Peace of mind guaranteed.</p>
-      </div>
-
-      <div class="team__card animation-team">
-        <p>Meet Pauline</p>
-        <img src="./images/Logos/scm.jpg" alt="Pauline - Company Owner">
-      </div>
-    </div>
-  </section> -->
-
+  <!-- EMAIL -->
   <section class="email">
     <div class="email__content">
       <h1 class="animation-email">Get A Quote</h1>
       <p class="animation-email">Send us an email for a custom quote</p>
-      <form action="#" class="animation-email">
-        <div class="form__wrap">
-          <input type="email" placeholder="Enter your email" id="email" required>
-          <button class="button" type="submit">Send</button>
-        </div>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button class="button">Send</button>
       </form>
     </div>
   </section>
-<!-- Footer Sec -->
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer__wrapper">
-      <div class="footer__desc">
-        <h1>Soko Cleaning Maids Ltd</h1>
-        <p>"YOU DON'T PAY FOR THE SERVICES, YOU PAY FOR THE RESULTS"</p>
-        <p id="phone"><i class="fa-solid fa-phone"></i> <a href="tel:+447359406440">+44 7359 406440</a></p>
-        <p id="email"><a href="mailto:sokocleaningmaids@gmail.com"><i class="fa-solid fa-envelope"></i> sokocleaningmaids@gmail.com</a></p>
-      </div>
-      <div class="footer__links">
-        <h2 class="footer__title">Quick Links</h2>
-        <a href="contact.html" class="footer__link">Contact Us</a>
-        <a href="about.html" class="footer__link">About Us</a>
-        <a href="services.html" class="footer__link">Services</a>
-      </div>
-      <div class="footer__links">
-        <h2 class="footer__title">Membership</h2>
-        <a class="footer__link" href="#">Pricing</a>
-        <a class="footer__link" href="#">Plans</a>
-        <a class="footer__link" href="#">FAQ</a>
-      </div>
-      <div class="footer__links">
-        <h2 class="footer__title">Follow Us</h2>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/SokoCleaningMaids" class="social-icon facebook" target="blank" rel="noopener" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://wa.me/447359406440" class="social-icon whatsapp" target="blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="https://www.instagram.com/SokoCleaningMaids" class="social-icon instagram" target="blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.tiktok.com/@SokoCleaningMaids" class="social-icon tiktok" target="blank" rel="noopener" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-        </div>
-      </div>
-       <div class="copyright-wrapper">
-      &copy; 2026 Soko Cleaning Maids Ltd &#124;  N-cubeDev.
-    </div>
-    </div>
-   
+    <p>&copy; 2026 Soko Cleaning Maids Ltd | N-cubeDev</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
   <script src="app.js"></script>
+
 </body>
 </html>
